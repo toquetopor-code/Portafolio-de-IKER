@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iker · Moderador de servidores</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0a24;--bg2:#17103d;--ink:#f3f0ff;--mute:#a9a1d6;--cy:#3ee8ff;--mg:#ff3d9a;--gold:#ffc83d;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(900px 500px at 15% -5%,#3a1b7a 0,transparent 60%),radial-gradient(800px 500px at 100% 20%,#6a1550 0,transparent 55%),var(--bg);color:var(--ink);font-family:'Sora',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(2px 2px at 20px 30px,#fff8,transparent),radial-gradient(2px 2px at 90px 120px,var(--cy),transparent),radial-gradient(1.5px 1.5px at 160px 60px,var(--gold),transparent),radial-gradient(2px 2px at 60px 180px,var(--mg),transparent);background-size:200px 220px;opacity:.55;animation:tw 6s ease-in-out infinite alternate}
+@keyframes tw{to{opacity:.25}}
+main{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:28px 20px 60px}
+.hero{text-align:center;padding:48px 8px 36px;position:relative}
+.badge{display:inline-block;padding:6px 16px;border:1px solid var(--cy);border-radius:99px;color:var(--cy);font-size:.85rem;background:rgba(62,232,255,.08);box-shadow:0 0 18px rgba(62,232,255,.35)}
+h1{font-family:'Bungee',Impact,sans-serif;font-size:clamp(4rem,22vw,9rem);line-height:1;margin:14px 0 6px;background:linear-gradient(100deg,var(--cy),#fff 45%,var(--mg));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(255,61,154,.5))}
+.role{font-size:clamp(1.1rem,4.5vw,1.6rem);font-weight:800;margin:0}
+.sub{color:var(--mute);max-width:520px;margin:12px auto 0}
+.float{position:absolute;font-size:2rem;animation:fl 5s ease-in-out infinite alternate;filter:drop-shadow(0 0 10px var(--mg))}
+.f1{left:2%;top:18%}.f2{right:3%;top:10%;animation-delay:-2s}.f3{left:8%;bottom:6%;animation-delay:-1s}.f4{right:9%;bottom:10%;animation-delay:-3s}
+@keyframes fl{to{transform:translateY(-16px) rotate(8deg)}}
+.cta{display:inline-block;margin-top:24px;padding:13px 28px;border-radius:14px;background:linear-gradient(90deg,var(--mg),#ff7a3d);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 8px 30px rgba(255,61,154,.45)}
+.cta:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.strip{overflow:hidden;margin:18px -20px;border-block:1px solid var(--line);background:rgba(0,0,0,.3);padding:10px 0;white-space:nowrap}
+.strip div{display:inline-block;animation:mq 28s linear infinite;font-family:'Bungee',monospace;color:var(--gold);letter-spacing:.06em}
+.strip span{margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+h2{font-family:'Bungee',Impact,sans-serif;font-size:clamp(1.5rem,6vw,2.2rem);margin:48px 0 16px;color:var(--ink);text-shadow:0 0 16px var(--cy)}
+.spec{border:2px solid var(--gold);border-radius:24px;padding:28px 24px;background:linear-gradient(135deg,rgba(255,200,61,.14),rgba(255,61,154,.1));box-shadow:0 0 40px rgba(255,200,61,.25);text-align:center}
+.spec .ic{font-size:3rem}
+.spec h3{font-family:'Bungee',Impact,sans-serif;font-size:clamp(1.4rem,6vw,2.2rem);margin:6px 0;color:var(--gold)}
+.spec p{margin:0 auto;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;backdrop-filter:blur(8px)}
+.card:nth-child(3n+1){border-top:3px solid var(--cy)}.card:nth-child(3n+2){border-top:3px solid var(--mg)}.card:nth-child(3n){border-top:3px solid var(--gold)}
+.card .ic{font-size:1.8rem}
+.card h3{margin:6px 0 4px;font-size:1.1rem}
+.card p{margin:0;color:var(--mute);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{padding:8px 14px;border-radius:99px;background:rgba(62,232,255,.1);border:1px solid rgba(62,232,255,.4);font-weight:600;font-size:.9rem}
+.tags span:nth-child(even){background:rgba(255,61,154,.1);border-color:rgba(255,61,154,.45)}
+.quote{margin:40px 0 0;padding:24px;border-radius:20px;border-left:6px solid var(--mg);background:var(--card);font-size:1.1rem}
+.contact{text-align:center;margin-top:48px;padding:32px 20px;border-radius:26px;background:linear-gradient(135deg,#2b1478,#7a1456);border:1px solid var(--line)}
+.contact h2{margin-top:0}
+.contact code{display:inline-block;margin-top:8px;padding:10px 18px;border-radius:12px;background:rgba(0,0,0,.4);color:var(--cy);font-size:1.05rem}
+footer{text-align:center;color:var(--mute);font-size:.85rem;margin-top:30px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<main>
+<section class="hero">
+<span class="float f1" aria-hidden="true">🛡️</span><span class="float f2" aria-hidden="true">🔨</span><span class="float f3" aria-hidden="true">⚔️</span><span class="float f4" aria-hidden="true">👁️</span>
+<span class="badge">Staff de confianza</span>
+<h1>IKER</h1>
+<p class="role">Moderador de servidores</p>
+<p class="sub">Mantengo los servidores limpios, justos y sin tramposos. Si hay un hack, lo encuentro.</p>
+<a class="cta" href="#contacto">Contáctame</a>
+</section>
+
+<div class="strip" aria-hidden="true"><div><span>/ban</span><span>/mute</span><span>/kick</span><span>/freeze</span><span>/ss</span><span>/history</span><span>/vanish</span><span>/warn</span><span>/tp</span><span>/invsee</span><span>/ban</span><span>/mute</span><span>/kick</span><span>/freeze</span><span>/ss</span><span>/history</span><span>/vanish</span><span>/warn</span><span>/tp</span><span>/invsee</span></div></div>
+
+<h2>En lo que me especializo</h2>
+<section class="spec">
+<div class="ic">🛡️</div>
+<h3>Moderar servidores</h3>
+<p>Es lo mío. Controlo el chat, resuelvo reportes y hago cumplir las normas para que la comunidad se sienta segura y el juego sea limpio.</p>
+</section>
+
+<h2>Lo que sé hacer</h2>
+<section class="grid">
+<div class="card"><div class="ic">🖥️</div><h3>SS (screenshare)</h3><p>Soy muy bueno revisando jugadores en SS: sé qué buscar y cómo confirmar si hay trampa.</p></div>
+<div class="card"><div class="ic">⌨️</div><h3>Todo tipo de comandos</h3><p>Domino los comandos de moderación y administración. Rápido, sin errores.</p></div>
+<div class="card"><div class="ic">🕵️</div><h3>Hacks y mods ilegales</h3><p>Conozco los hacks y mods ilegales, cómo funcionan y cómo detectarlos.</p></div>
+<div class="card"><div class="ic">💬</div><h3>Chat y reportes</h3><p>Atiendo reportes, aplico sanciones justas y dejo todo registrado.</p></div>
+<div class="card"><div class="ic">🤝</div><h3>Trabajo en staff</h3><p>Me coordino con el equipo y con los jugadores con respeto y claridad.</p></div>
+<div class="card"><div class="ic">⚡</div><h3>Reacción rápida</h3><p>Actúo en el momento para frenar problemas antes de que crezcan.</p></div>
+</section>
+
+<h2>Mi kit</h2>
+<div class="tags"><span>Moderación</span><span>SS</span><span>Comandos</span><span>Detección de hacks</span><span>Mods ilegales</span><span>Anti-cheat</span><span>Sanciones</span><span>Reportes</span><span>Control de chat</span><span>Trabajo en equipo</span></div>
+
+<p class="quote">“Un servidor sano empieza con un moderador que sabe lo que hace.”</p>
+
+<section class="contact" id="contacto">
+<h2>¿Necesitas un mod?</h2>
+<p>Escríbeme y hablamos.</p>
+<code>Discord: tu-usuario</code>
+</section>
+<footer>© Iker · Moderación de servidores</footer>
+</main>
+</body>
+</html>
